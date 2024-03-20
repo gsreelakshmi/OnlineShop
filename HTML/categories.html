@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firestore CRUD</title>
+    <link rel="stylesheet" href="/CSS/categories.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-user "></i>Category Management</h1>
+        <div class="input-group">
+            <input type="text" id="categoryName" placeholder="Enter Category Name">
+            <button id="addCategoryBtn">Add Category</button>
+        </div>
+        <div class="button-group">
+            <button id="showAllCategoriesBtn">Show All Categories</button>
+        </div>
+        <div class="category-list">
+            <h2>All Categories</h2>
+            <ul id="categories"></ul>
+        </div>
+        <div class="delete-category">
+            <select id="deleteCategorySelect"></select>
+            <button id="deleteCategoryBtn">Delete Category</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/JAVASCRIPT/categories.js"></script>
+</body>
+</html>

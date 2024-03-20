@@ -1,0 +1,185 @@
+/* CSS for Customer Dashboard */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    
+}
+
+header {
+    background-color: #232f3e; /* Darker color similar to Amazon */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#sidebar {
+    background-color: #f3f3f3; /* Lighter color similar to Amazon */
+    color: #000;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%; /* Full height sidebar */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+.content {
+    margin-right: 270px; /* Adjusted margin to accommodate sidebar */
+    padding: 20px;
+}
+
+.cart-container {
+    background-color: #232f3e; /* Lighter color similar to Amazon */
+    color: #ffffff;
+    font-weight: 600;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(221, 111, 7, 0.863); /* Adjusted box shadow */
+    position: fixed;
+    top: 100px; /* Adjusted top position */
+    width: 240px;
+    right: 0px; /* Adjusted right position */
+    transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .cart-container {
+        width: 3000px; /* Decrease width for smaller screens */
+        right: 10px; /* Adjust right position */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cart-container {
+        width: 200px; /* Further decrease width for even smaller screens */
+        right: 5px; /* Further adjust right position */
+    }
+}
+
+
+.cart-container:hover {
+    transform: translateY(-5px);
+}
+
+.payment-section {
+    background-color: #f3f3f3; /* Lighter color similar to Amazon */
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjusted box shadow */
+    position: fixed;
+    bottom: 20px; /* Adjusted bottom position */
+    width: 250px;
+    right: 20px; /* Adjusted right position */
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px; /* Increased grid gap for better separation */
+    height: 50vh;
+}
+
+/* Product Card */
+.product-card {
+    background-color: #fff; /* Background color for product card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(235, 13, 13, 0.658); /* Box shadow */
+    padding: 20px; /* Padding */
+    padding-top: 120px;
+    transition: transform 0.3s ease; /* Smooth transition */
+    position: relative;
+}
+
+
+.product-card:hover {
+    transform: translateY(-5px); /* Hover effect */
+}
+.payment-section {
+    background-color: #f3f3f3; /* Lighter color similar to Amazon */
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(13, 10, 194, 0.637); /* Adjusted box shadow */
+    position: fixed;
+    bottom: 20px; /* Adjusted bottom position */
+    width: 250px;
+    right: 20px; /* Adjusted right position */
+}
+
+/* Payment Method Select */
+#paymentMethod {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Payment Amount Input */
+#creditAmount {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Payment Button */
+#paymentButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #f0c14b; /* Amazon's button color */
+    color: #111; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#paymentButton:hover {
+    background-color: #f90; /* Darker hover color */
+    color: #fff; /* Hover text color */
+}
+.add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff9900; /* Amazon's button color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.product-card .product-image {
+    max-width:120px; /* Set maximum width to 100% */
+    max-height: 120px; /* Set maximum height to 100% */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: Top; /* Center the image horizontally */
+    position: absolute; /* Set absolute positioning */
+    top: 10px; /* Align image to the top */
+    bottom: 0; /* Align image to the bottom */
+    left: 50px; /* Align image to the left */
+    right: 0; /* Align image to the right */
+}

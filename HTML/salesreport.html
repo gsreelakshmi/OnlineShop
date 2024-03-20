@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/CSS/salesreport.css">
+</head>
+<body>
+  <header>
+    <h1 style="margin-bottom: 20px;">Admin Dashboard</h1> 
+    <div class="buttons">
+      <button id="showAllSalesBtn">All Sales</button>
+      
+      <button id="showCashSalesBtn">Cash Sales</button>
+      <button id="showCreditSalesBtn">Credit Sales</button>
+    </div>
+    <div class="dateFilters">
+      <label for="fromDate">From Date:</label>
+      <input type="date" id="fromDate" name="fromDate">
+      <label for="toDate">To Date:</label>
+      <input type="date" id="toDate" name="toDate">
+      <button id="filterByDateBtn">Filter By Date</button>
+    </div>
+  </header>
+  <div id="salesContainer"></div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/JAVASCRIPT/salesreport.js"></script>
+</body>
+</html>

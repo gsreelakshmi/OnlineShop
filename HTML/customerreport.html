@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer List</title>
+    <link rel="stylesheet" href="/CSS/customerreport.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Customer List</h1>
+        <button id="fetchAllCustomersBtn">All Customers</button>
+        <button id="fetchCashPaymentBtn">Cash Payment</button>
+        <button id="fetchCreditPaymentBtn">Credit Payment</button>
+        <div class="filters">
+            <div class="filter">
+                <input type="number" id="minQuantityInput" placeholder="Min Quantity">
+                <input type="number" id="maxQuantityInput" placeholder="Max Quantity">
+                <button id="filterByQuantityIcon">Filter by Quantity</button>
+            </div>
+            <div class="filter">
+                <input type="number" id="minPriceInput" placeholder="Min Price">
+                <input type="number" id="maxPriceInput" placeholder="Max Price">
+                <button id="filterByPriceIcon">Filter by Price</button>
+            </div>
+        </div>
+       
+        <div id="customerList"></div>
+        <div id="pagination"></div>
+    </div>
+   
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/JAVASCRIPT/integrate.js"></script>
+    <script>
+        // Add event listener to the "All Customers" button
+        $(document).ready(function() {
+            $('#fetchAllCustomersBtn').on('click', function() {
+                // Call the function to integrate data and display all customers
+                integrateDataIntoSalesAPI();
+            });
+
+            // Add event listener to the "Cash Payment" button
+            $('#fetchCashPaymentBtn').on('click', function() {
+                // Call the function to fetch customers who made cash payments
+                fetchCashPaymentCustomers();
+            });
+
+            // Add event listener to the "Credit Payment" button
+            $('#fetchCreditPaymentBtn').on('click', function() {
+                // Call the function to fetch customers who made credit payments
+                fetchCreditPaymentCustomers();
+            });
+
+            // Add event listener to the "Top 10 Customers" button
+            $('#fetchTopCustomersBtn').on('click', function() {
+                // Call the function to fetch top customers based on highest price
+                fetchTopCustomers();
+            });
+        });
+    </script>
+</body>
+</html>

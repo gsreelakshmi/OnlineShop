@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #007bff; /* Blue color */
+        }
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        #logoutBtn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        #logoutBtn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank You for Purchasing with Us!</h1>
+    <p>Your order is confirmed.</p>
+    <button id="logoutBtn">Logout</button>
+
+    <script>
+        document.getElementById("logoutBtn").addEventListener("click", function() {
+            // Redirect to the login page
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>

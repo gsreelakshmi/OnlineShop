@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="/CSS/products.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include your custom JavaScript file -->
+    <script src="/JAVASCRIPT/products.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Inventory</h1>
+        <div class="option-container">
+            <button id="addProductBtn">Add Product</button>
+            <div id="addProductForm" class="form-section" style="display: none;">
+                <h2>Add Product</h2>
+                <select id="productCategory">
+                   
+                </select>
+                <input type="text" id="productName" placeholder="Enter Product Name">
+                <input type="number" id="productQuantity" placeholder="Enter Quantity">
+                <input type="text" id="productImage" placeholder="Enter Image Link">
+                <input type="number" id="productPrice" placeholder="Enter Price per Unit">
+                <button id="submitProductBtn">Submit</button>
+            </div>
+        </div>
+        <div class="option-container">
+            <button id="displayProductsBtn">Display Products</button>
+            <div id="displayProductForm" class="form-section" style="display: none;">
+                <h2>Display Products</h2>
+                <select id="displayCategory">
+                    <option value="">All Categories</option>
+                </select>
+                <select id="displayProducts">
+                    
+                </select>
+            </div>
+        </div>
+        <div class="option-container">
+            <button id="updateProductBtn">Update Product</button>
+            <div id="updateProductForm" class="form-section" style="display: none;">
+                <h2>Update Product</h2>
+                <select id="updateProducts">
+                    
+                </select>
+                <input type="text" id="updateProductName" placeholder="Enter New Product Name">
+                <input type="text" id="updateProductCategory" placeholder="Enter New Product Category">
+                <input type="number" id="updateProductQuantity" placeholder="Enter New Quantity">
+                <input type="number" id="updateProductPrice" placeholder="Enter New Price per Unit">
+                <button id="submitUpdateProductBtn">Update</button>
+            </div>
+        </div>
+        <div class="option-container">
+            <button id="deleteProductBtn">Delete Product</button>
+            <div id="deleteConfirmation" class="form-section" style="display: none;">
+                <h2>Delete Product</h2>
+                <select id="productsForDeletion">
+                   
+                </select>
+                <button id="confirmDeleteBtn">Confirm Delete</button>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
